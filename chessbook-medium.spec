@@ -24,6 +24,7 @@ Release:	%{release}
 License:	Distributable
 Group:		Games/Boards
 Source0:	gm2600.pgn.bz2
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	sjeng-free
 BuildRequires:	pgn-extract
 %if %build_phalanx
