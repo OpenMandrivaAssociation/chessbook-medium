@@ -1,5 +1,5 @@
 %define	version	0.1
-%define release	%mkrel 3
+%define release	%mkrel 5
 
 # (Abel)
 # 1. This PGN file is originated from crafty site, named gm2600.pgn.
@@ -53,17 +53,12 @@ Provides:	phalanx-book = 0.1
 Phalanx chess engine opening book (medium size)
 
 %prep
-if w | grep -q lmontel; then
-  cat <<_EOF_
-*************************************************************************
-* WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
-*************************************************************************
-Building this package would not be successful if lmontel logs in. Please
-wait until he logs out before building this RPM, or jobs will be simply
-killed without notice.
-_EOF_
-  sleep 1
-fi
+#*************************************************************************
+#* WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+#*************************************************************************
+#Building this package would not be successful if lmontel logs in. Please
+#wait until he logs out before building this RPM, or jobs will be simply
+#killed without notice.
 
 %setup -q -c -T
 bzip2 -dc %{SOURCE0} > gm2600.pgn
@@ -77,9 +72,7 @@ pgn-extract -W -D -s -ogm2600-clean.pgn gm2600.pgn
 # decent machines
 mem=`LC_ALL=C free -b | grep '^Mem' | awk '{print $2}' | xargs -i expr {} / 2`
 
-if [[ "$mem" =~ "^[0-9]+$" ]]; then
-  echo -e "book\ngm2600-clean.pgn\n$mem\nquit" | %{_gamesbindir}/sjeng
-fi
+echo -e "book\ngm2600-clean.pgn\n$mem\nquit" | %{_gamesbindir}/sjeng
 
 # === Phalanx ===
 # Totally 1562649 positions, multiply it by 36 byte and that's
@@ -135,5 +128,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_gamesdatadir}/phalanx/sbook-medium.phalanx
 %endif
-
-
