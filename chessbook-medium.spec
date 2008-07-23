@@ -1,5 +1,5 @@
 %define	version	0.1
-%define release	%mkrel 5
+%define release	%mkrel 7
 
 # (Abel)
 # 1. This PGN file is originated from crafty site, named gm2600.pgn.
