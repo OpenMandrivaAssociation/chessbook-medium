@@ -16,6 +16,7 @@
 
 # probably I'll build book for phalanx in the future too
 %define build_phalanx 0
+%define debug_package %{nil}
 
 Summary:	Chess engine opening book
 Name:		chessbook-medium
@@ -128,3 +129,44 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_gamesdatadir}/phalanx/sbook-medium.phalanx
 %endif
+
+
+%changelog
+* Thu Dec 09 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1-9mdv2011.0
++ Revision: 617023
+- the mass rebuild of 2010.0 packages
+
+* Wed Sep 02 2009 Thierry Vignaud <tv@mandriva.org> 0.1-8mdv2010.0
++ Revision: 424832
+- rebuild
+
+* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.1-7mdv2009.0
++ Revision: 243878
+- rebuild
+
+* Mon Feb 18 2008 Olivier Thauvin <nanardon@mandriva.org> 0.1-5mdv2008.1
++ Revision: 172132
+- fix build
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Fri Aug 04 2006 Olivier Thauvin <nanardon@mandriva.org>
++ 08/04/06 22:24:08 (53031)
+- rebuild
+
+* Fri Aug 04 2006 Olivier Thauvin <nanardon@mandriva.org>
++ 08/04/06 21:55:52 (53021)
+Import chessbook-medium
+
+* Thu Aug 25 2005 Abel Cheung <deaddog@mandriva.org> 0.1-2mdk
+- Some unfortunate but necessary changes, if anybody want to
+  successfully rebuild this package.
+
+* Mon Jul 04 2005 Abel Cheung <deaddog@mandriva.org> 0.1-1mdk
+- First Mandriva package
+
