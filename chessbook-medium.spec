@@ -38,7 +38,7 @@ International chess opening book (PGN format, medium size)
 %package -n	sjeng-book-normal-medium
 Summary:	Sjeng chess engine opening book for normal chess
 Group:		Games/Boards
-URL:		http://sjeng.sourceforge.net/
+URL:		https://sjeng.sourceforge.net/
 Provides:	sjeng-book = 0.1
 
 %description -n	sjeng-book-normal-medium
@@ -47,7 +47,7 @@ Sjeng chess engine opening book for international chess (medium size)
 %package -n	phalanx-book-medium
 Summary:	Phalanx chess engine opening book for normal chess
 Group:		Games/Boards
-URL:		http://dusan.freeshell.org/phalanx/
+URL:		https://dusan.freeshell.org/phalanx/
 Provides:	phalanx-book = 0.1
 
 %description -n	phalanx-book-medium
